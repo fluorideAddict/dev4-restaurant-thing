@@ -1,2 +1,5 @@
 # dev4-restaurant-thing
-# test
+Dit is onze repo voor het dev4 eindopdracht
+
+Josef Barka
+Nick van Woudenberg
