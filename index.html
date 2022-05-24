@@ -6,14 +6,11 @@
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1"
         />
+        <!--that's a lot of stylesheets-->
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat&family=Sacramento&display=swap"
             rel="stylesheet"
         />
-        <script
-            src="https://kit.fontawesome.com/b699c21610.js"
-            crossorigin="anonymous"
-        ></script>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
@@ -58,9 +55,7 @@
                             <a href="#menu" class="nav-link">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#reservation" class="nav-link"
-                                >Reservation</a
-                            >
+                            <a href="#reservation" class="nav-link">Reservation</a>
                         </li>
                     </ul>
 
@@ -87,7 +82,7 @@
                 <a class="go-top" href="#"><i class="fas fa-arrow-up"></i></a>
             </div>
 
-            <section class="offers">
+            <section id="menu">
                 <div class="container">
                     <h2 class="section-title">Our Menu</h2>
                     <img src="https://th.bing.com/th/id/OIP.35gzjpHmWRPk42CmnjgIhAHaLx?w=198&h=315&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Menu" class="menu">
@@ -95,8 +90,7 @@
                 </div>
             </section>
 
-
-            <section class="team" id="team">
+            <section id="team">
                 <div class="container">
                     <h2 class="section-title">Employees</h2>
                     <div class="row">
@@ -113,7 +107,7 @@
                             <h2 class="name">Kara John</h2>
                             <h3 class="position">Bar staff</h3>
                             <p class="description-paragraph">
-                                Ze is 28 jaar en ze werk hier sinds twee jaar.
+                                Ze is 28 jaar en ze werkt hier sinds twee jaar.
                             </p>
                         </div>
                         <div>
@@ -142,35 +136,37 @@
                     <div class="carousel">
                         <div>
                             <p class="testimonial-paragraph">
-                                Port ave 3210
+                                Port Ave 3210
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-
+            
+            <section id="reservation">
+                <div class="container">
+                    <h2 class="section-title">Reservations</h2>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
             <p class="copyright">
-                Copyright &copy; 2020 by James stan. All rights reserved.
+                Copyright &copy; 2020 by James Stan. All rights reserved.
             </p>
         </footer>
-
-        <script
-            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-            integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0="
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="app.js"></script>
-        <script>
-            AOS.init();
-        </script>
     </body>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0="
+        crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="main.js"></script>
 </html>
