@@ -23,8 +23,6 @@ body {
 [class*="col-"] {
     float: left;
     padding: 15px;
-    /*the border is placeholder*/
-    border: 1px solid red;
 }
 
 /* For mobile phones: */
@@ -48,11 +46,48 @@ body {
 .col-12 {width: 100%;}
 }
 
+/*make row cover up the whole page*/
+#row {
+    background-color: white;
+    height: 4000px;
+}
+
 /*rest of the page gets styled here*/
 .header {
     padding: 8px;
     color: white;
     background-color: black;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+#navbar li, img {
+    display: block;
+    padding: 8px;
+    background-color: #333333;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar img {
+    float: right;
+}
+
+#navbar a {
+    color: white
+}
+
+#navbar .active {
+    background-color: white;
+    color: black !important;
 }
 
 .menuclickable:hover {
