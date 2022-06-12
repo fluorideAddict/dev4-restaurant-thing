@@ -48,10 +48,16 @@ function login() {
 
 function getUser() {
     // Fetch user data from API
+    api("me").then((res) => {
+        if(res.message == 'success'){
+            document.getElementById('welcome').innerText = `Welcome, ${res.user.firstname} ${res.user.lastname}`;
+        }
+    });
 }
 
 function logout(){
-    
+    deleteCookie("token");
+    showPage('loginPage');
 }
 
 //console.log(api("me"))

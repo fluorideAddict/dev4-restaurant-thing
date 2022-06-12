@@ -7,12 +7,6 @@ from flask_jwt_extended import(
     get_jwt_identity
 )
 
-#User needs to be logged in for this route
-@jwt_required()
-def me():
-    user = get_jwt_identity()
-    return jsonify(user=user, message = "success"), 200
-
 def login():
     # Get data from request
     email = request.json.get("email", None)
@@ -33,3 +27,9 @@ def login():
     # Create JWT
     access_token = create_access_token(user)
     return jsonify(access_token = access_token, message = "success"), 200
+
+#User needs to be logged in for this route
+@jwt_required()
+def me():
+    user = get_jwt_identity()
+    return jsonify(user=user, message = "success"), 200
