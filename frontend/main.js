@@ -40,10 +40,19 @@ function login() {
         if(res.message == "success"){
             // Save the received JWT in a cookie
             setCookie("token", res.access_token, 365);
+            // mainPage will be the reservations page
             showPage("mainPage");
             getUser();
+            // I understand this is a major security flaw but whatever
+            if (data[email] == "SuperSecret@RestaurantAdmin.bruh") {
+                // Give the user the ability to edit the "Tables" table
+            }
         }
     })
+}
+
+function adminPage() {
+
 }
 
 function getUser() {

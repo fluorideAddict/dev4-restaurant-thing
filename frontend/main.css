@@ -48,3 +48,15 @@ button{
 .hidden{
     display: none;
 }
+
+/*
+#mainPage{
+    /* no left and right margins on mobile?
+    position: fixed;
+    left: 25%;
+    right: 25%;
+    top: 50%;
+    transform: translate(0, calc(-50%));
+    height: calc(100vh - 20px);
+}
+*/

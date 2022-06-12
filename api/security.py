@@ -11,12 +11,13 @@ def login():
     # Get data from request
     email = request.json.get("email", None)
     password = request.json.get("password", None)
+
     # Make the select query
     qry = "SELECT * FROM `users` WHERE `email` = :email"
-    
+
     # Get user data from database
-    print("Break3")
     user = DB.one(qry, {"email": email})
+
     # Check if user exists and hashed password matches
     if not user or not check_password_hash(user["password"], password):
         return{"message": "invalid credentials"}, 401
@@ -32,4 +33,6 @@ def login():
 @jwt_required()
 def me():
     user = get_jwt_identity()
+    print(user)
     return jsonify(user=user, message = "success"), 200
+
