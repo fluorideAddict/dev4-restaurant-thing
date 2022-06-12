@@ -1,16 +1,49 @@
-
-function register(e) {
-    // Check if passwords match
-
+function register() {
     // Fetch data from html
-
+    let data = {
+        "email": getValue("email1"),
+        "password": getValue("password1"),
+        "firstname": getValue("firstname"),
+        "lastname": getValue("lastname"),
+    }
+    // Check if all fields are filled
+    let missingField = checkMissingField(data);
+    if (missingField == true) {
+        return
+    }
+    // Check if passwords match
+    let confirm = getValue("confirm");
+    if (data["password"] != confirm) {
+        return
+    }
     // Submit data to API
+    api("users", "POST", data).then((res) =>{
+        if(res.message == "success"){
+            alert("User created");
+        }
+    })
 }
 
 function login() {
     // Fetch data from html
-
+    let data = {
+        "email": getValue("email2"),
+        "password": getValue("password2"),
+    }
+    // Check if all fields are filled
+    let missingField = checkMissingField(data)
+    if (missingField == true) {
+        return
+    }
     // Submit data to API
+    api("auth", "POST", data).then((res) => {
+        if(res.message == "success"){
+            // Save the received JWT in a cookie
+            setCookie("token", res.access_token, 365);
+            showPage("mainPage");
+            getUser();
+        }
+    })
 }
 
 function getUser() {
@@ -21,8 +54,17 @@ function logout(){
     
 }
 
-
+//console.log(api("me"))
 // Helper functions
+
+function checkMissingField(data){
+    // Check for missing field
+    for (const key in data) {
+        if (data[key] == "") {
+            return("true")
+        }
+    }
+}
 
 function showPage(id){
     let pages = document.getElementsByClassName("container");
