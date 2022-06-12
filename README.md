@@ -5,3 +5,6 @@ $ cd api
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r api/requirements.txt
+
+don't forget to launch the app
+$ python3 api/app.py
